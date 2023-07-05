@@ -7,7 +7,6 @@ import {
 } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore.js";
 import {
   RecaptchaVerifier,
-  updateProfile,
   signInWithPhoneNumber,
 } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js";
 const empverifyBtn = document.querySelector("#empverifyBtn");
@@ -95,11 +94,7 @@ stusubmitBtn.addEventListener("click", async () => {
   message.previousElementSibling.classList.add("text-bg-info");
 
   if (otpFetch) {
-    console.log(auth.currentUser);
-    // updateProfile(auth.currentUser, {
-    //   uid: id,
-    // });
-    // window.location.href = `http://localhost:5500/public/src/studentPage.html?rollNo=${sturollNo}`;
+    window.location.href = `http://localhost:5500/public/src/studentPage.html?rollNo=${sturollNo}`;
     console.log(auth.currentUser);
   }
   window.recaptchaVerifier = new RecaptchaVerifier(
