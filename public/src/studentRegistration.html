@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Student Registration Page</title>
+  </head>
+  <body class="font-monospace bg-warning">
+    <!-- Navigation open -->
+    <nav class="navbar navbar-dark bg-dark">
+      <div class="container-fluid w-100 d-flex fs-5 user-select-none">
+        <a class="navbar-brand fw-bolder fs-5" href="#">
+          <img
+            src="../logo.jpg"
+            alt="Logo"
+            width="40"
+            height="40"
+            class="d-inline-block align-text-center"
+          />
+          Sree Venkateswara College of Engineering
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasDarkNavbar"
+          aria-controls="offcanvasDarkNavbar"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="offcanvas offcanvas-end text-bg-dark"
+          tabindex="-1"
+          id="offcanvasDarkNavbar"
+          aria-labelledby="offcanvasDarkNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">
+              SVCN ADMIN
+            </h5>
+            <li class="nav-item dropdown">
+              <label data-bs-toggle="dropdown" aria-expanded="true" for="image">
+                <div id="image">
+                  <img src="../profileImage.jpg" class="profileDP" />
+                </div>
+              </label>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="./profile.html">Profile</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="./profile.html"
+                    >Edit Profile</a
+                  >
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" id="signOutBtn">SignOut</a>
+                </li>
+              </ul>
+            </li>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  aria-current="page"
+                  href="./home.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="./studentRegistration.html"
+                  >Student Registration</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./companyRegistration.html"
+                  >Company Registration</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./companyProfile.html"
+                  >Company Profile</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./studentFeeDetails.html"
+                  >Student Fee Details</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./studentAllot.html"
+                  >Student Allotment Center</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Navigation close -->
+    <!-- Student Registration Form Open -->
+    <div
+      class="mainForm container-fluid w-50 mt-2 user-select-none bg-light rounded-3"
+    >
+      <form class="row g-3 p-3">
+        <div class="col-md-4">
+          <label for="Rno" class="form-label">RollNo :</label>
+          <input
+            type="text"
+            class="form-control border border-1 border-dark"
+            placeholder="xxx"
+            id="Rno"
+            required
+          />
+        </div>
+        <div class="col-md-4">
+          <label for="firstName" class="form-label">FirstName :</label>
+          <input
+            type="text"
+            class="form-control border border-1 border-dark"
+            placeholder="xxx"
+            id="firstName"
+            required
+          />
+        </div>
+        <div class="col-md-4">
+          <label for="lastName" class="form-label">LastName :</label>
+          <input
+            type="text"
+            class="form-control border border-1 border-dark"
+            placeholder="xxx"
+            id="lastName"
+            required
+          />
+        </div>
+        <div class="col-md-4">
+          <label for="Email" class="form-label">Email :</label>
+          <input
+            type="email"
+            class="form-control border border-1 border-dark"
+            placeholder="xxx"
+            id="Email"
+            required
+          />
+        </div>
+        <div class="col-md-3">
+          <label for="mobileNo" class="form-label">MobileNo :</label>
+          <input
+            type="text"
+            class="form-control border border-1 border-dark"
+            placeholder="xxx"
+            id="mobileNo"
+            required
+          />
+        </div>
+        <div class="col-md-5">
+          <label for="formFile" class="form-label">Upload Photo:</label>
+          <input
+            class="form-control bg-warning text-dark border border-1 border-dark"
+            type="file"
+            id="profile"
+          />
+        </div>
+        <fieldset class="row mt-3">
+          <legend class="col-form-label col-sm-1 pt-0">Gender</legend>
+          <div
+            class="col-sm-10 d-flex align-items-center justify-content-around"
+          >
+            <div class="form-check">
+              <input
+                class="form-check-input border border-1 border-dark"
+                type="radio"
+                name="gender"
+                id="gMale"
+                value="Male"
+                checked
+              />
+              <label class="form-check-label" for="gMale"> Male </label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input border border-1 border-dark"
+                type="radio"
+                name="gender"
+                id="gFemale"
+                value="Female"
+              />
+              <label class="form-check-label" for="gFemale"> Female </label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input border border-1 border-dark"
+                type="radio"
+                name="gender"
+                id="gOthers"
+                value="Others"
+              />
+              <label class="form-check-label" for="gOthers"> Others </label>
+            </div>
+          </div>
+        </fieldset>
+        <div class="col-md-2">
+          <label for="inputBranch" class="form-label">Branch</label>
+          <select
+            class="form-select border border-1 border-dark"
+            id="inputBranch"
+            required
+          >
+            <option selected>Select one</option>
+            <option value="CSE">CSE</option>
+            <option value="ECE">ECE</option>
+            <option value="MECH">MECH</option>
+            <option value="EEE">EEE</option>
+            <option value="CIVIL">CIVIL</option>
+          </select>
+        </div>
+        <div class="col-2">
+          <label for="10cgp" class="form-label">10th CGPA</label>
+          <input
+            type="text"
+            class="form-control border border-1 border-dark"
+            id="10cgp"
+            placeholder="0.0"
+            required
+          />
+        </div>
+        <div class="col-2">
+          <label for="10perc" class="form-label">10th Perc</label>
+          <input
+            type="text"
+            class="form-control border border-1 border-dark"
+            id="10perc"
+            placeholder="0%"
+            required
+          />
+        </div>
+        <div class="col-2">
+          <label for="12cgp" class="form-label">12th CGPA</label>
+          <input
+            type="text"
+            class="form-control border border-1 border-dark"
+            id="12cgp"
+            placeholder="0.0"
+            required
+          />
+        </div>
+        <div class="col-2">
+          <label for="12perc" class="form-label">12th Perc</label>
+          <input
+            type="text"
+            class="form-control border border-1 border-dark"
+            id="12perc"
+            placeholder="0%"
+            required
+          />
+        </div>
+        <div class="col-2">
+          <label for="bperc" class="form-label">Btech Perc</label>
+          <input
+            type="text"
+            class="form-control border border-1 border-dark"
+            id="bperc"
+            placeholder="0%"
+            required
+          />
+        </div>
+        <div class="col-6">
+          <label for="bglogs" class="form-label">Btech Backlogs:</label>
+          <input
+            type="text"
+            class="form-control border border-1 border-dark"
+            id="bglogs"
+            placeholder="0"
+            required
+          />
+        </div>
+        <div class="col-6">
+          <label for="DOB" class="form-label">DOB:</label>
+          <input
+            type="date"
+            class="form-control border border-1 border-dark"
+            placeholder="DD-MM-YYYY"
+            id="DOB"
+            required
+          />
+        </div>
+
+        <div class="col-4">
+          <label for="fname" class="form-label">Father Name:</label>
+          <input
+            type="text"
+            class="form-control border border-1 border-dark"
+            placeholder="xxx"
+            id="fname"
+          />
+        </div>
+        <div class="col-4">
+          <label for="mname" class="form-label">Mother Name:</label>
+          <input
+            type="text"
+            class="form-control border border-1 border-dark"
+            placeholder="xxx"
+            id="mname"
+          />
+        </div>
+        <div class="col-4">
+          <label for="pno" class="form-label">Mobile</label>
+          <input
+            type="text"
+            class="form-control border border-1 border-dark"
+            placeholder="xxx"
+            id="pno"
+          />
+        </div>
+        <div class="col-12">
+          <label for="Address" class="form-label">Address</label>
+          <input
+            type="text"
+            class="form-control border border-1 border-dark"
+            id="Address"
+            placeholder="1234 Main st Nellore"
+          />
+        </div>
+        <div class="col-12 justify-content-center d-flex">
+          <button type="submit" id="btn" class="btn btn-primary w-100">
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+    <!--Student Registration Form Close-->
+    <!-- Started Toast -->
+    <div class="msg">
+      <div
+        role="alert"
+        aria-live="assertive"
+        aria-atomic="true"
+        class="toast"
+        data-bs-autohide="false"
+      >
+        <div class="toast-header">
+          <strong class="me-auto">SVCN</strong>
+          <small>1 mins ago</small>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="toast"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="toast-body message"></div>
+      </div>
+    </div>
+    <!-- Ended Toast -->
+    <script type="module" src="../js/studentReg.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.body {
+  padding: 2rem;
+}
+.main {
+  position: relative;
+  border-radius: 1rem;
+  height: 90vh;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  padding: 0 2rem;
+  width: 45%;
+  height: 80%;
+  justify-content: center;
+}
+.text {
+  font-size: 100px;
+  width: 30rem;
+  line-height: 6rem;
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: black;
+  -webkit-text-fill-color: #fff;
+  font-weight: bold;
+}
+.buttons {
+  display: flex;
+  margin: 15px;
+  gap: 1.3rem;
+}
+button {
+  cursor: pointer;
+  border-radius: 0.3rem;
+  padding: 2rem;
+  outline: none;
+}
+.image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -2;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.gradient {
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(to right, black, transparent);
+  overflow: hidden;
+  position: absolute;
+  opacity: 0.99;
+  z-index: -1;
+}
+.outer {
+  width: 100%;
+  height: 100%;
+}
+.head {
+  text-align: center;
+  width: 100%;
+  height: 3rem;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.intro {
+  font-size: 25px;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: black;
+  -webkit-text-fill-color: #fff;
+}
+.hide {
+  display: none;
+}
+.msg {
+  position: absolute;
+  bottom: 5%;
+  right: 8%;
+}
+
+#image {
+  border-radius: 50%;
+  border: 1px solid white;
+  width: 50px;
+  height: 50px;
+}
+.profileDP {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+}
+.mainForm {
+  box-shadow: 5px 5px 0px 4px #000;
+  border: 3.5px solid #000;
+}
+.studentProfile {
+  position: absolute;
+  right: 20px;
+  width: 10rem;
+  height: 10rem;
+}
+#studentPic {
+  width: 100%;
+  height: 100%;
+}
+.icon {
+  font-size: 1rem;
+}

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>StudentAllotedCompanyPage</title>
+  </head>
+  <body class="font-monospace bg-info">
+    <!-- Navigation open -->
+    <nav
+      class="navbar navbar-expand-lg bg-body-tertiary bg-dark"
+      data-bs-theme="dark"
+    >
+      <div class="container-fluid w-100 d-flex fs-5 user-select-none">
+        <a class="navbar-brand fw-bolder fs-5" href="#">
+          <img
+            src="../logo.jpg"
+            alt="Logo"
+            width="40"
+            height="40"
+            class="d-inline-block align-text-center"
+          />
+          Sree Venkateswara College of Engineering
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul
+              class="navbar-nav mb-2 mb-lg-2 w-50 d-flex align-items-center justify-content-between mx-5"
+            >
+              <li class="nav-item mx-2">
+                <a class="nav-link" aria-current="page" href="./home.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link" href="./studentRegistration.html"
+                  >StudentRegister</a
+                >
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link" href="./companyRegistration.html"
+                  >CompanyRegister</a
+                >
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link" href="./companyProfile.html"
+                  >CompanyProfile</a
+                >
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link active" href="./studentAllot.html">SAC</a>
+              </li>
+              <li class="nav-item dropdown mx-5">
+                <label
+                  data-bs-toggle="dropdown"
+                  aria-expanded="true"
+                  for="image"
+                >
+                  <div id="image">
+                    <img src="../profileImage.jpg" class="profileDP" />
+                  </div>
+                </label>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="./profile.html">Profile</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="./profile.html"
+                      >Edit Profile</a
+                    >
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <button class="dropdown-item" id="signOutBtn">
+                      SignOut
+                    </button>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Navigation close -->
+    <div class="container-fluid w-50 mt-4 p-1 user-select-none">
+      <div class="input-group mb-3 border border-1 border-dark rounded-3">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Student's RollNo"
+          id="stuRoll"
+        />
+        <button class="btn btn-primary" type="button" id="searchBtn">
+          Search
+        </button>
+      </div>
+    </div>
+    <!-- Student Registration Form Open -->
+    <div
+      class="mainForm container-fluid w-50 mt-2 user-select-none bg-light rounded-3 position-relative hide" id="mainForm"
+    >
+      <form class="row g-3 p-3">
+        <div class="col-md-5">
+          <label for="Name" class="form-label">Name :</label>
+          <input
+            type="text"
+            class="form-control border border-1 border-dark"
+            placeholder="xxx"
+            id="stuName"
+            required 
+          />
+        </div>
+        <div class="col-md-4">
+          <label for="Email" class="form-label">Email :</label>
+          <input
+            type="email"
+            class="form-control border border-1 border-dark"
+            placeholder="xxx"
+            id="Email"
+            required
+          />
+        </div>
+        <div class="studentProfile">
+          <img src="../profileImage.jpg" id="studentPic" />
+        </div>
+        <div class="col-md-5">
+          <label for="mobileNo" class="form-label">MobileNo :</label>
+          <input
+            type="text"
+            class="form-control border border-1 border-dark"
+            placeholder="xxx"
+            id="mobileNo"
+            required
+          />
+        </div>
+        <div class="col-md-4">
+          <label for="inputBranch" class="form-label">Branch</label>
+          <input
+            type="text"
+            class="form-control border border-1 border-dark"
+            id="inputBranch"
+            placeholder="Branch"
+            required
+          />
+        </div>
+        <div class="col-md-3"></div>
+        <div class="col-2">
+          <label for="10cgp" class="form-label">10th CGPA</label>
+          <input
+            type="text"
+            class="form-control border border-1 border-dark"
+            id="10cgp"
+            placeholder="0.0"
+            required
+          />
+        </div>
+        <div class="col-2">
+          <label for="10perc" class="form-label">10th Perc</label>
+          <input
+            type="text"
+            class="form-control border border-1 border-dark"
+            id="10perc"
+            placeholder="0%"
+            required
+          />
+        </div>
+        <div class="col-2">
+          <label for="12cgp" class="form-label">12th CGPA</label>
+          <input
+            type="text"
+            class="form-control border border-1 border-dark"
+            id="12cgp"
+            placeholder="0.0"
+            required
+          />
+        </div>
+        <div class="col-2">
+          <label for="12perc" class="form-label">12th Perc</label>
+          <input
+            type="text"
+            class="form-control border border-1 border-dark"
+            id="12perc"
+            placeholder="0%"
+            required
+          />
+        </div>
+        <div class="col-2">
+          <label for="bperc" class="form-label">Btech Perc</label>
+          <input
+            type="text"
+            class="form-control border border-1 border-dark"
+            id="bperc"
+            placeholder="0%"
+            required
+          />
+        </div>
+        <div class="col-2">
+          <label for="bglogs" class="form-label">Backlogs:</label>
+          <input
+            type="text"
+            class="form-control border border-1 border-dark"
+            id="bglogs"
+            placeholder="0"
+            required
+          />
+        </div>
+        <div class="col-md-6">
+          <label for="Rno" class="form-label">Company Name :</label>
+          <select class="form-select border border-1 border-dark" id="cName">
+            <option selected>Open this select menu</option>
+          </select>
+        </div>
+        <div class="col-md-6">
+          <label for="lastName" class="form-label">Role :</label>
+          <select class="form-select border border-1 border-dark" id="cRole">
+            <option selected>Open this select menu</option>
+          </select>
+        </div>
+        <div class="col-md-6">
+          <label for="lastName" class="form-label">Package :</label>
+          <select class="form-select border border-1 border-dark" id="cPack">
+            <option selected>Open this select menu</option>
+          </select>
+        </div>
+        <div class="col-md-6">
+          <label for="lastName" class="form-label">Location :</label>
+          <select class="form-select border border-1 border-dark" id="cLoc">
+            <option selected>Open this select menu</option>
+          </select>
+        </div>
+        <div class="col-12 justify-content-center d-flex">
+          <button type="submit" id="submitBtn" class="btn btn-danger w-100">
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+    <!--Student Registration Form Close-->
+    <!-- Started Toast -->
+    <div class="msg">
+      <div
+        role="alert"
+        aria-live="assertive"
+        aria-atomic="true"
+        class="toast"
+        data-bs-autohide="false"
+      >
+        <div class="toast-header">
+          <strong class="me-auto">SVCN</strong>
+          <small>1 mins ago</small>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="toast"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="toast-body message"></div>
+      </div>
+    </div>
+    <!-- Ended Toast -->
+    <script type="module" src="../js/sac.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
